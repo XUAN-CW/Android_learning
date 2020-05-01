@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    将⿏标放于 TextView 标签内，⿏标右击，在弹出的菜单中选择-->
+<!--    【Refactor】-> 【Extract】-> 【Style】，弹出如图1.3所⽰的 Extract Android-->
+<!--    Style 对话框。默认选中抽取的所有属性，在 Style name: 输⼊框中，对抽取的-->
+<!--    样式进⾏命名为 textStyle。样式的使用跟 CSS 差不多-->
+    <TextView
+        android:text="@string/hello_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/textStyle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

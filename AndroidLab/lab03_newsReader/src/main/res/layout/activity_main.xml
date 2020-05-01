@@ -1,0 +1,45 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+<!--    将布局中的三个 TextView 的 android:text 属性的值抽取为字符串资源。-->
+<!--    将⿏标放在该android:text上，使⽤【Alt+Enter】快捷键，在弹出的快捷菜单-->
+<!--    中选择 Extract string resource，将该属性值抽取为字符串资源。抽取出的-->
+<!--    字符串资源在 res/values/strings.xml ⽂件中可查看到。-->
+
+    <TextView
+    android:id="@+id/article_title"
+    android:text="@string/article_title"
+        style="@style/ArticleTitle" />
+
+    <ScrollView
+        android:layout_below="@id/article_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/article_subheading"
+                android:text="@string/article_subheading"
+                style="@style/ArticleSubtitle" />
+
+            <TextView
+                android:id="@+id/article_text"
+                android:text="@string/article_text"
+                style="@style/ArticleText" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

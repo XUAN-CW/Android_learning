@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">lab03_newsReader</string>
+    <string name="article_title">Article Title</string>
+    <string name="article_subheading">Article Subheading</string>
+    <string name="article_text">
+        article_text\narticle_text\narticle_text\narticle_text\n
+        article_text\narticle_text\narticle_text\narticle_text\n
+        article_text\narticle_text\narticle_text\narticle_text\n
+        article_text\narticle_text\narticle_text\narticle_text\n
+        article_text\narticle_text\narticle_text\narticle_text\n
+        article_text\narticle_text\narticle_text\narticle_text\n
+        article_text\narticle_text\narticle_text\narticle_text\n
+        article_text\narticle_text\narticle_text\narticle_text\n
+        article_text\narticle_text\narticle_text\narticle_text\n
+        article_text\narticle_text\narticle_text\narticle_text\n
+        article_text\narticle_text\narticle_text\narticle_text\n
+        article_text\narticle_text\narticle_text\narticle_text\n
+    </string>
+</resources>

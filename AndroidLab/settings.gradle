@@ -1,0 +1,2 @@
+include ':lab01_helloworld', ':lab02_counter', ':lab03_newsReader'
+rootProject.name='AndroidLab'
