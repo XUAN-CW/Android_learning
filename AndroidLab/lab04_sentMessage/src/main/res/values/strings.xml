@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">lab04_sentMessage</string>
+    <string name="message"></string>
+</resources>
