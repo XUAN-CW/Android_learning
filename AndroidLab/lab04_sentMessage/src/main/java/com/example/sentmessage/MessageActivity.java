@@ -17,18 +17,13 @@ public class MessageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
-//        Toast.makeText(MessageActivity.this, "here is MessageActivity",
-//                Toast.LENGTH_SHORT).show();
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(
-                "MESSAGE_STRING");
-//        Toast.makeText(MessageActivity.this, "here is "+message,
-//                Toast.LENGTH_SHORT).show();
-
-        final TextView tvMessage = findViewById(R.id.message);
+        Intent intent = getIntent();//获取 Intent 对象
+        final TextView tvMessage = findViewById(R.id.message);//获取 id 为  message 的 TextView 控件
+        String message = intent.getStringExtra("MESSAGE_STRING");//根据键找传过来的
         if (message != null) {
+            //判断传过来的值是否为空，不为空则根据传过来的值设置显示的内容
             if (tvMessage != null) {
-                tvMessage.setText(message);
+                tvMessage.setText(message);//设置显示的内容
             }
         }
     }

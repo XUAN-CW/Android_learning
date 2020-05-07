@@ -1,2 +1,2 @@
-include ':lab01_helloworld', ':lab02_counter', ':lab03_newsReader', ':lab04_sentMessage', ':lab05_counter2', ':lab06_loginScreen', ':lab06_loginscreen'
+include ':lab01_helloworld', ':lab02_counter', ':lab03_newsReader', ':lab04_sentMessage', ':lab05_counter2', ':lab06_loginscreen', ':lab06_loginscreen', ':lab07_newslist', ':extendLab01_newslist', ':extendLab01_newslist2', ':extendLab07_newslist2'
 rootProject.name='AndroidLab'

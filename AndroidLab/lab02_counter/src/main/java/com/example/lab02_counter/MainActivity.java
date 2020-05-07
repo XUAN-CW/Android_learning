@@ -14,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        Toast.makeText(MainActivity.this, "here is 33",
+//                Toast.LENGTH_SHORT).show();
+
         Button btnShowToast = findViewById(R.id.btnShowToast);
         btnShowToast.setOnClickListener(new View.OnClickListener(){
             @Override

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AndroidLab.iml" filepath="$PROJECT_DIR$/../AndroidLab.iml" group="AndroidLab" />
+      <module fileurl="file://$PROJECT_DIR$/lab01_helloworld.iml" filepath="$PROJECT_DIR$/lab01_helloworld.iml" group="AndroidLab/lab01_helloworld" />
+      <module fileurl="file://$PROJECT_DIR$/../lab02_counter/lab02_counter.iml" filepath="$PROJECT_DIR$/../lab02_counter/lab02_counter.iml" group="AndroidLab/lab02_counter" />
+      <module fileurl="file://$PROJECT_DIR$/../lab03_newsReader/lab03_newsReader.iml" filepath="$PROJECT_DIR$/../lab03_newsReader/lab03_newsReader.iml" group="AndroidLab/lab03_newsReader" />
+      <module fileurl="file://$PROJECT_DIR$/../lab04_sentMessage/lab04_sentMessage.iml" filepath="$PROJECT_DIR$/../lab04_sentMessage/lab04_sentMessage.iml" group="AndroidLab/lab04_sentMessage" />
+      <module fileurl="file://$PROJECT_DIR$/../lab05_counter2/lab05_counter2.iml" filepath="$PROJECT_DIR$/../lab05_counter2/lab05_counter2.iml" group="AndroidLab/lab05_counter2" />
+      <module fileurl="file://$PROJECT_DIR$/../lab06_loginscreen/lab06_loginscreen.iml" filepath="$PROJECT_DIR$/../lab06_loginscreen/lab06_loginscreen.iml" group="AndroidLab/lab06_loginscreen" />
+      <module fileurl="file://$PROJECT_DIR$/../lab07_newslist/lab07_newslist.iml" filepath="$PROJECT_DIR$/../lab07_newslist/lab07_newslist.iml" group="AndroidLab/lab07_newslist" />
+    </modules>
+  </component>
+</project>

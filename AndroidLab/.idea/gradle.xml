@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/extendLab01_newslist" />
+            <option value="$PROJECT_DIR$/extendLab01_newslist2" />
+            <option value="$PROJECT_DIR$/extendLab07_newslist2" />
+            <option value="$PROJECT_DIR$/lab01_helloworld" />
+            <option value="$PROJECT_DIR$/lab02_counter" />
+            <option value="$PROJECT_DIR$/lab03_newsReader" />
+            <option value="$PROJECT_DIR$/lab04_sentMessage" />
+            <option value="$PROJECT_DIR$/lab05_counter2" />
+            <option value="$PROJECT_DIR$/lab06_loginscreen" />
+            <option value="$PROJECT_DIR$/lab07_newslist" />
+          </set>
+        </option>
         <option name="resolveModulePerSourceSet" value="false" />
-        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>
