@@ -3,6 +3,10 @@ package com.example.lab07_newslist;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.TypedArray;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -14,13 +18,57 @@ import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+    SQLiteDatabase db=null;
+    MySQLiteOpenHelper myDbHlper = null;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);System.out.println(111);
+        setContentView(R.layout.activity_main);
+         myDbHlper = new MySQLiteOpenHelper(MainActivity.this);
+        db = myDbHlper.getReadableDatabase();
+        Cursor cursor = db.query(
+                NewsContract.NewsEntry.TABLE_NAME ,
+                null , null , null , null , null , null);
+
+
+        List<News> newsList = new ArrayList<>();
+        ListView lvNewsList = findViewById(R.id.lv_news_list);
+        int titleIndex = cursor.getColumnIndex(
+                NewsContract.NewsEntry.COLUMN_NAME_TITLE);
+        int authorIndex = cursor.getColumnIndex(
+                NewsContract.NewsEntry.COLUMN_NAME_AUTHOR);
+        int imageIndex = cursor.getColumnIndex(
+                NewsContract.NewsEntry.COLUMN_NAME_IMAGE);
+
+        while (cursor.moveToNext()) {
+            News news = new News();
+
+            String title = cursor.getString(titleIndex);
+            String author = cursor.getString(authorIndex);
+            String image = cursor.getString(imageIndex);
+
+            Bitmap bitmap = BitmapFactory.decodeStream(
+                    getClass().getResourceAsStream("/" + image));
+
+            news.setTitle(title);
+            news.setmAuthor(author);
+            news.setBitmap(bitmap);
+            newsList.add(news);
+
+        }
+        NewsAdapter newsAdapter = new NewsAdapter(
+                MainActivity.this,
+                R.layout.list_item,
+                newsList);
+        lvNewsList.setAdapter(newsAdapter);
+
 //        showTitle();
 //        SimpleAdapterDemo();
-        customAdapter();
+//        customAdapter();
     }
 
 
@@ -73,12 +121,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void customAdapter(){
-
+        final String NEWS_ID = "news_id";//设置 news 的键
+        List<News> newsList = new ArrayList<>();
         String[] titles = getResources().getStringArray(R.array.titles);//获取标题资源
         String[] authors = getResources().getStringArray(R.array.authors);//获取作者资源
         TypedArray images = getResources().obtainTypedArray(R.array.images);//获取图片资源
-        final String NEWS_ID = "news_id";//设置 news 的键
-        List<News> newsList = new ArrayList<>();
 
         int length;
         ////选出数量最小的

@@ -1,10 +1,14 @@
 package com.example.lab07_newslist;
 
+import android.graphics.Bitmap;
+
 public class News {
     private String mTitle;
     private String mAuthor;
-//    private String mContent;
+    private String mContent;
     private int mImageId;
+
+    private Bitmap bitmap;
 
     public String getTitle() {
         return getmTitle();
@@ -45,5 +49,9 @@ public class News {
 
     public void setmImageId(int mImageId) {
         this.mImageId = mImageId;
+    }
+
+    public void setBitmap(Bitmap bitmap) {
+        this.bitmap = bitmap;
     }
 }
