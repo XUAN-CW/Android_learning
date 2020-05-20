@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.ContentResolver;
 import android.content.ContentUris;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
+    public static final String DATA_URI =
+            "com.glriverside.xgqin.ggmusic.DATA_URI";
 
     private ContentResolver mContentResolver;
     private ListView mPlaylist;
@@ -92,6 +95,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Long albumId = cursor.getLong(albumIdIndex);
                     String data = cursor.getString(dataIndex);
                     Uri dataUri = Uri.parse(data);
+
+                    Intent serviceIntent = new Intent(MainActivity.this,
+                            MusicService.class);
+                    serviceIntent.putExtra(MainActivity.DATA_URI, data);
+                    startService(serviceIntent);
+
 
                     if (mMediaPlayer != null) {
                         try {
