@@ -84,6 +84,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mCursorAdapter = new MediaCursorAdapter(MainActivity.this);
         mPlaylist = findViewById(R.id.lv_playlist);
 
+        pbProgress=findViewById(R.id.progress);
+        System.out.println("1.pbProgress=findViewById(R.id.progress):"+pbProgress);
         if (ivPlay != null) {
             ivPlay.setOnClickListener(MainActivity.this);
         }
@@ -202,10 +204,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         intentFilter.addAction(ACTION_MUSIC_START);
         intentFilter.addAction(ACTION_MUSIC_STOP);
         registerReceiver(musicReceiver , intentFilter);
-//        pbProgress=new ProgressBar(MainActivity.this);
         pbProgress=findViewById(R.id.progress);
         System.out.println("++++++++++++++++="+findViewById(R.id.progress).toString());
-        System.out.println("--------:"+pbProgress);
+        System.out.println("2.pbProgress=findViewById(R.id.progress):"+pbProgress);
     }
 
     @Override
@@ -321,7 +322,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             switch (msg.what) {
                 case UPDATE_PROGRESS:
                     int position = msg.arg1;
-                    System.err.println(new Date().toString()+":"+position);
+//                    System.err.println(new Date().toString()+":"+position);
                     pbProgress.setProgress(position);
                     break;
                 default:
