@@ -1,0 +1,2 @@
+rootProject.name='lab08_loginScreen2'
+include ':app', ':lab06_loginscreen'

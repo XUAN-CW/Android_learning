@@ -1,0 +1,2 @@
+rootProject.name='lab09_newslist'
+include ':app', ':lab07_newslist'

@@ -1,2 +1,0 @@
-rootProject.name='lab08_loginScreen'
-include ':app', ':lab06_loginscreen'
